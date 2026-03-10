@@ -1,13 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import {StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
 
-function App() {
-  return (
-    <div style={{textAlign:"center",marginTop:"50px"}}>
-      <h1>School Dashboard</h1>
-      <p>ระบบจัดการโรงเรียน</p>
-    </div>
-  );
-}
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
